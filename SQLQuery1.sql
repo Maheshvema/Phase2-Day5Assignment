@@ -28,7 +28,7 @@ declare @contact nvarchar(50)
 select @name=CName from inserted 
 select @contact=Contact from inserted 
 insert into bank.MailInfo(MailDate,MailMessage)
-values(getdate(),'Your NetBanking Password is CPwd It is valid upto 2 days only.Update it')
+values(getdate(),'Your NetBanking Password is + CPwd + It is valid upto 2 days only.Update it')
 print 'Record Inserted & Action captured in MailInfo Table'
 
 insert into bank.Customer (Cname,Contact)values('mahesh','6304971938')
